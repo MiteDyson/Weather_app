@@ -1,90 +1,185 @@
-# Weather App
 
-This is a simple weather application built using Flutter. It provides current weather details for any city using the WeatherAPI.
-The app also dynamically changes its background based on the current weather conditions.
+# 🌤️ Weather App — Beautiful & Accurate Weather Forecasts
 
-## Features
+<div align="center">
 
-- **Search for the current weather of any city.**
-- **Displays temperature, weather condition, humidity, and wind speed.**
-- **Dynamic background images that change based on the weather condition.**
-- **Saves and loads the last searched city using shared preferences.**
+  <img src="https://github.com/MiteDyson/Weather_app/blob/main/lib/images/icon.png" alt="Weather App Logo" width="150">  
+  <br/><br/>
 
-## Screenshots
+**A modern Flutter application to check live weather conditions powered by Open-Meteo API**
 
-![Home Screen](https://github.com/user-attachments/assets/9f168df5-ff5a-499b-89b9-4ced0c7f65c0)
-![Weather Details Screen](https://github.com/user-attachments/assets/82f8fbb6-0fbd-4476-b8a3-a093c5d7b37a)
+  <br/>
 
-## Demo Video
+![Flutter](https://img.shields.io/badge/Flutter-3.2.3+-blue.svg)
+![Dart](https://img.shields.io/badge/Dart-3.0+-teal.svg)
+![Open-Meteo](https://img.shields.io/badge/Open--Meteo-API-orange.svg)
+![Platform](https://img.shields.io/badge/Platform-Android-blueviolet.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-[Watch the Demo Video](https://github.com/user-attachments/assets/d593b08c-8558-421c-8119-c390333a9f65)
+<br/><br/>
+____
+### 📲 **[Download APK](https://drive.google.com/file/d/1SiB7-7mlHcdsK6BWM8VJeKdoHbb5F0zc/view?usp=drive_link)**
 
-## Getting Started
+</div>
 
-### Prerequisites
+---
 
-- **Flutter SDK**: [Install Flutter](https://flutter.dev/docs/get-started/install)
-- **An API key from WeatherAPI**: [Get WeatherAPI Key](https://www.weatherapi.com/)
+## ✨ Key Features
 
-### Installation
+* 🌍 **City-Based Weather Search** — Get live weather of any city worldwide
+* 🌡️ **Live Weather Data** — Temperature, humidity, windspeed & conditions
+* 🖼️ **Dynamic Backgrounds** — UI changes based on real-time weather
+* 💾 **Smart Persistence** — Saves last searched city using Shared Preferences
+* ⚡ **Fast & Lightweight** — Optimized API fetching for smooth performance
+* 🎨 **Clean & Modern UI** — Simple, intuitive interface made with Flutter
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/MiteDyson/WeatherApp.git
-   ```
-2. **Navigate to the project directory:**
-   ```bash
-   cd WeatherApp
-   ```
-3. **Get the dependencies:**
-   ```bash
-   flutter pub get
-   ```
-4. **Replace the placeholder API key in `main.dart` with your WeatherAPI key:**
-   ```dart
-   final String _apiKey = 'YOUR_API_KEY_HERE';
-   ```
 
-### Running the App
+---
 
-Run the app on an emulator or a connected device:
+## 🚀 Quick Start Guide
+
+### ✅ Requirements
+
+* **Flutter SDK 3.2.3+**
+* **Dart 3.0+**
+* **Open-Meteo API** *(No key required!)*
+* **Android Studio or VS Code**
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/MiteDyson/Weather_app
+cd Weather_app
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash
+flutter pub get
+```
+
+---
+
+### 3️⃣ Run the App
 
 ```bash
 flutter run
 ```
 
-## Usage
+---
 
-1. **Enter a city name** in the input field on the home screen.
-2. Press the **"Get Weather"** button to fetch the weather details.
-3. The app will display the current weather details and a background image based on the weather condition.
+## 📖 How It Works
 
-## Code Overview
+1. Enter a **city name**
+2. App fetches coordinates of that city
+3. Open-Meteo API returns **live temperature, humidity, windspeed & conditions**
+4. Background dynamically updates based on weather condition
+5. Last searched city stored via **Shared Preferences**
 
-### Main Files
+---
 
-- **`main.dart`**: Entry point of the app, sets up the `WeatherProvider` and defines the `HomeScreen`.
-- **`details.dart`**: Defines the `WeatherDetailsScreen` which displays the weather information and dynamic background.
+## 📱 App Screenshots
 
-### WeatherProvider
+<div align="center">
 
-The `WeatherProvider` class is responsible for:
+<table>
+<tr>
+<td align="center">
+<img src="https://github.com/user-attachments/assets/9f168df5-ff5a-499b-89b9-4ced0c7f65c0" width="500">
+<br><strong> Adaptable User Interface</strong>
+</td>
 
-- Fetching weather data from WeatherAPI.
-- Storing the last searched city using shared preferences.
-- Providing weather data to the UI through `ChangeNotifier`.
+<td align="center">
+<img src="https://github.com/user-attachments/assets/82f8fbb6-0fbd-4476-b8a3-a093c5d7b37a" width="500">
+<br><strong>🌤️ Weather Details</strong>
+</td>
+</tr>
+</table>
 
-### WeatherDetailsScreen
+</div>
 
-The `WeatherDetailsScreen` class:
+---
 
-- Fetches the weather data for the last searched city.
-- Displays weather details like temperature, weather condition, humidity, and wind speed.
-- Dynamically changes the background image based on the current weather condition.
+## 🎥 Demo Video
 
-## Dependencies
+▶️ **[Watch Demo](https://github.com/user-attachments/assets/d593b08c-8558-421c-8119-c390333a9f65)**
 
-- **`flutter/material.dart`**: Core Flutter framework.
-- **`provider`**: State management.
-- **`shared_preferences`**: Persistent storage for last searched city.
-- **`http`**: For making API requests.
+---
+
+## 🔌 API Flow
+
+| Step | Process       | Description                          |
+| ---- | ------------- | ------------------------------------ |
+| `1`  | City Search   | User enters city name                |
+| `2`  | Geo Lookup    | API fetches latitude/longitude       |
+| `3`  | Weather Fetch | Open-Meteo returns full weather data |
+| `4`  | UI Update     | Background & UI update dynamically   |
+| `5`  | Persistence   | City name stored for next session    |
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+
+* 🧩 Flutter
+* 🎯 Dart
+* 🎨 Material Design
+* 🖼️ Dynamic Image Backgrounds
+
+### **State Management**
+
+* 🔄 ChangeNotifier
+* 📦 Provider
+
+### **Storage**
+
+* 💾 Shared Preferences
+
+### **API**
+
+* 🌐 Open-Meteo Weather API
+* 📡 HTTP package
+
+---
+
+## 🔧 Core Files Overview
+
+### `main.dart`
+
+* Initializes theme
+* Loads WeatherProvider
+* Opens HomeScreen
+
+### `WeatherProvider`
+
+* Fetches weather
+* Stores last searched city
+* Notifies UI updates
+
+### `WeatherDetailsScreen`
+
+* Shows all weather stats
+* Applies dynamic background based on conditions
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+### ☁️ *Made with Flutter, for a cleaner view of the sky.*
+
+**⭐ Star the repo** — it helps a lot!
+
+</div>
+
+---
